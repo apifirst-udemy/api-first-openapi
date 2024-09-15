@@ -31,4 +31,4 @@ required:
   - cardNumber
   - expiryMonth
   - expiryYear
-  - cvv    
+  - cvv
