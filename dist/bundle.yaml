@@ -285,6 +285,7 @@ components:
       example: '2022-08-22T11:43:06-07:00'
       title: ISO Timestamp
       readOnly: true
+      nullable: true
     address:
       type: object
       properties:
@@ -467,6 +468,7 @@ components:
           format: uuid
           description: The unique identifier of the category
           readOnly: true
+          nullable: true
         category:
           type: string
           description: The category of the product
@@ -494,6 +496,7 @@ components:
           format: uuid
           description: The unique identifier of the image
           readOnly: true
+          nullable: true
         url:
           type: string
           format: url
@@ -520,6 +523,7 @@ components:
           format: uuid
           description: The unique identifier of the product
           readOnly: true
+          nullable: true
         description:
           type: string
           description: The description of the product
