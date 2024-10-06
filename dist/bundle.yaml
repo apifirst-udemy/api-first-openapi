@@ -28,7 +28,7 @@ security:
 tags:
   - name: Customer
     description: Example actions on customer accounts.
-  - name: Products
+  - name: Product
     description: Product operations
   - name: Order
     description: Operations about orders.
@@ -112,7 +112,7 @@ paths:
   /v1/products:
     get:
       tags:
-        - Products
+        - Product
       summary: Get a list of Products
       description: Get a list of Products based on some param.
       operationId: listProducts
@@ -131,7 +131,7 @@ paths:
                 $ref: '#/components/schemas/Problem'
     post:
       tags:
-        - Products
+        - Product
       summary: Create a new product
       description: Create a new product.
       operationId: createProduct
@@ -463,7 +463,7 @@ components:
         instance:
           type: string
           description: A URI reference that identifies the specific occurrence of the problem.  It may or may not yield further information if dereferenced.
-    dimentions:
+    dimensions:
       type: object
       properties:
         length:
@@ -484,7 +484,7 @@ components:
           minimum: 1
           maximum: 999
           example: 10
-      description: The dimentions of the product
+      description: The dimensions of the product
       required:
         - length
         - width
@@ -558,8 +558,8 @@ components:
           description: The description of the product
           minLength: 3
           maxLength: 255
-        dimentions:
-          $ref: '#/components/schemas/dimentions'
+        dimensions:
+          $ref: '#/components/schemas/dimensions'
         categories:
           type: array
           items:
@@ -712,7 +712,7 @@ components:
         customerId:
           type: string
           format: uuid
-        selectPaymentMethod:
+        selectPaymentMethodId:
           type: string
           format: uuid
           nullable: true

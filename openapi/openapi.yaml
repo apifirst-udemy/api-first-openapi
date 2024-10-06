@@ -24,7 +24,7 @@ externalDocs:
 tags:
   - name: Customer
     description: "Example actions on customer accounts."
-  - name: Products
+  - name: Product
     description: Product operations 
   - name: Order
     description: Operations about orders.    
