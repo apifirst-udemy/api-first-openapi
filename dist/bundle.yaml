@@ -253,6 +253,26 @@ paths:
           description: Bad Request
         '404':
           description: Not Found
+  /v1/categories:
+    get:
+      tags:
+        - Products
+      summary: List Categories
+      description: List Categories
+      operationId: listCategories
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/category_list'
+        '400':
+          description: Bad Request
+        '404':
+          description: Not Found
 components:
   securitySchemes:
     main_auth:
@@ -510,6 +530,12 @@ components:
           minLength: 3
           maxLength: 255
           example: Electronics and Gadgets
+        category_code:
+          type: string
+          description: The category code of the product
+          minLength: 3
+          maxLength: 25
+          example: ELECTRONICS
         dateCreated:
           $ref: '#/components/schemas/iso_timestamp'
         dateUpdated:
@@ -724,3 +750,7 @@ components:
           description: The order lines of the order
       required:
         - customerId
+    category_list:
+      type: array
+      items:
+        $ref: '#/components/schemas/category'
