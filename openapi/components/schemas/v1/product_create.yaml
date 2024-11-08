@@ -9,8 +9,9 @@ properties:
     $ref: dimensions.yaml
   categories:
     type: array
+    description: The category codes for the product
     items: 
-      $ref: category.yaml 
+      type: string
   images:
     type: array
     items: 

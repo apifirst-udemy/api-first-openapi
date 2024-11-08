@@ -623,8 +623,9 @@ components:
           $ref: '#/components/schemas/dimensions'
         categories:
           type: array
+          description: The category codes for the product
           items:
-            $ref: '#/components/schemas/category'
+            type: string
         images:
           type: array
           items:
