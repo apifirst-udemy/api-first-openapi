@@ -139,7 +139,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/product'
+              $ref: '#/components/schemas/product_create'
       responses:
         '201':
           description: Created
@@ -611,6 +611,33 @@ components:
       type: array
       items:
         $ref: '#/components/schemas/product'
+    product_create:
+      type: object
+      properties:
+        description:
+          type: string
+          description: The description of the product
+          minLength: 3
+          maxLength: 255
+        dimensions:
+          $ref: '#/components/schemas/dimensions'
+        categories:
+          type: array
+          items:
+            $ref: '#/components/schemas/category'
+        images:
+          type: array
+          items:
+            $ref: '#/components/schemas/image'
+        price:
+          type: string
+          pattern: ^-?(?:0|[1-9]\d{0,2}(?:,?\d{3})*)(?:\.\d+)?$
+        cost:
+          type: string
+          pattern: ^-?(?:0|[1-9]\d{0,2}(?:,?\d{3})*)(?:\.\d+)?$
+      required:
+        - description
+        - price
     order_customer:
       type: object
       properties:
