@@ -194,9 +194,7 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/order_list'
+                $ref: '#/components/schemas/order_list'
         '400':
           description: Bad Request
         '404':
