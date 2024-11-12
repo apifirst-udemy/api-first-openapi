@@ -541,6 +541,7 @@ components:
       required:
         - category
         - description
+        - category_code
     image:
       type: object
       properties:
